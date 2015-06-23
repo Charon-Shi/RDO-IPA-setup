@@ -5,7 +5,7 @@
 hostname=$1
 IPA=$2
 REALM=$3
-$DB=$4
+DB=$4
 
 hostname $1
 /etc/init.d/network start
