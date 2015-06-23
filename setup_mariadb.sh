@@ -12,7 +12,7 @@ kinit admin
 yum install ipa-admintools
 echo "ipa-admintools installed..."
 
-cd /etc/yum.repo.d/
+cd /etc/yum.repos.d/
 wget https://copr.fedoraproject.org/coprs/rharwood/mariadb/repo/epel-7/rharwood-mariadb-epel-7.repo
 echo "mariadb downloaded..."
 
