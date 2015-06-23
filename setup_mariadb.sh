@@ -49,8 +49,3 @@ cd /etc/my.cnf.d/
 sed -i "/\[server\]/a kerberos_principal_name=MySQL\/$DB@$REALM\nkerberos_keytab_path=/var/lib/mysql/mysql.keytab"  server.cnf
 
 service mariadb start
-mysql -u root << EOF
-#select @@kerberos_principal_name;
-#select @@kerberos_keytab_path;
-CREATE USER test_kerberos IDENTIFIED VIA kerberos AS 'admin@CHARLIE.COM';
-EOF
