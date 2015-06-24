@@ -2,7 +2,6 @@
 
 IPA=$1
 
-killall
 hostname rdo.charlie.com
 /etc/init.d/network start
 
@@ -21,7 +20,7 @@ packstack --allinone
 sed -i "1s/^/DNS1=\"$IPA\"\n/" /etc/sysconfig/network-scripts/ifcfg-eth0
 /etc/init.d/network start
 sed -i "s/[0-9.][0-9.]*/$IPA/" /etc/resolv.conf
-yum install ipa-client ipa-admintools -y
-ipa-client-install --uninstall
+yum install -y ipa-client ipa-admintools 
+#ipa-client-install --uninstall
 ipa-client-install --force-ntpd --force-join 
 
