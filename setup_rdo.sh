@@ -19,5 +19,5 @@ yum update -y
 service sshd start
 yum install -y https://rdoproject.org/repos/rdo-release.rpm
 yum install -y openstack-packstack
-/usr/bin/rpm -e -nodeps mariadb-server-5.5.41-2.el7_0.x86_64
+/usr/bin/rpm -e --nodeps mariadb-server-5.5.41-2.el7_0.x86_64
 packstack --allinone
