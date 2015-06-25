@@ -30,6 +30,8 @@ yum update -y
 echo "info updated..."
 
 yum install -y  mariadb{,-debuginfo,-devel,-libs,-server}
+firewall-cmd --permanent --zone=public --add-port=3306/tcp
+firewall-cmd --reload
 echo "mariadb installed..."
 
 ipa service-add MySQL/$(hostname -f)
