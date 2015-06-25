@@ -10,6 +10,8 @@ DB=$4
 hostname $1
 /etc/init.d/network start
 
+ntpdate -u $IPA
+
 #uninstall mariadb and ipa-client
 yum remove -y mariadb-server mariadb-libs mariadb
 kinit admin
