@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IPA=$1
-hostname="rdo2.charlie.com"
+hostname="rdo.charlie.com"
 
 hostname $hostname
 sed -i "s/[a-z.][a-z.]*/$hostname/" /etc/hostname
