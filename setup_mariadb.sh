@@ -13,7 +13,7 @@ hostname $1
 ntpdate -u $IPA
 
 #uninstall mariadb and ipa-client
-yum remove -y mariadb-server mariadb-libs mariadb
+yum remove -y mariadb-server mariadb
 kinit admin
 
 yum install ipa-admintools
