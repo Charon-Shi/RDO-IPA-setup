@@ -63,5 +63,3 @@ echo 'export OS_PASSWORD=$PASSWD' >> /home/keystone.rc
 echo 'export OS_USER_DOMAIN_NAME=Default' >> /home/keystone.rc
 echo 'export OS_PROJECT_DOMAIN_NAME=Default' >> /home/keystone.rc
 echo 'export OS_PROJECT_NAME=IdM' >> /home/keystone.rc
-
-echo 'export OS_AUTH_URL=http://{$hostname -i}:5000/v2.0/' >> /home/keystone.rc
